@@ -7,63 +7,45 @@ components:
   # Specify set of local or remote hosts to monitor. This can be list of hostname or 
   # IP address combination
   host-components:
-    - host: 10.237.6.40
+    - host: 10.230.5.40
       description: DMZ Server
-      location: TCO, Chennai
-    - host: 10.237.6.115
+      location: MUM, Mumbai
+    - host: 10.230.5.41
       description: DMZ Server
-      location: TCO, Chennai
-    - host: 10.252.19.110
-      description: MS SQL Server for IBMS-SDB#1 EB Data
-      location: SDB1, CCC, Coimbatore
-    - host: 10.252.118.165
-      description: MS SQL Server for IBMS-SDB#2 EB Data
-      location: SDB2, CCC, Coimbatore
-    - host: 10.252.118.111
+      location: DEL, Delhi
+    - host: 10.250.118.111
       description: Gateway Server
-      location: CCC, Coimbatore
+      location: CBE, Coimbatore
 
   # Specify server processes listening on particular ports, such as TCP, HTTP or FTP etc,.
   server-components:
-    - host: 10.237.6.115
+    - host: 10.230.6.115
       port: 3306
       description: MySQL Server
-    - host: 10.237.6.115
+    - host: 10.230.6.115
       port: 8091
       description: Couchbase Server
-    - host: 10.237.6.115
+    - host: 10.230.6.115
       port: 15672
       description: RabbitMQ Server
-    - host: 10.237.6.115
+    - host: 10.230.6.115
       port: 9000
       description: Hadoop HDFS Service
-    - host: 10.237.6.115
+    - host: 10.230.6.115
       port: 60020
       description: HBase Region Server
-    - host: 10.252.118.111
+    - host: 10.250.118.111
       port: 21
-      description: FTP Server for Sunshot
-    - host: 10.252.19.110
+      description: FTP Server
+    - host: 10.250.19.110
       port: 1433
-      description: MS SQL Server/SDB1/CCC/Coimbatore
-    - host: 10.252.118.165
-      port: 1433
-      description: MS SQL Server/SDB2/CCC/Coimbatore
+      description: MS SQL Server/SDB1/MUM/Mumbai
 
   # Specify daemon like processes which runs in background
   service-components:
-    - host: 10.237.6.115
-      name: centralgateway
-      description: Central Gateway Service
-    - host: 10.219.17.203
-      name: mysql
-      description: MySQL Service
-    - host: 10.252.118.111
-      name: ibms-client
-      description: IBMS TCP Client
-    - host: 10.252.118.111
-      name: solar-tcp-client
-      description: Solar TCP Client
+    - host: 10.230.6.115
+      name: tcp-client
+      description: TCP Client
 
 # -----------------------------------------------
 # MONITOR - SETTINGS
@@ -96,6 +78,5 @@ monitor-settings:
 # When a server/component/service goes down or not reachable after <max.continuous.failure.times>
 # notify this to the TCP server with appropriate notification message.
 notification-settings:
-  host: 10.237.6.115
+  host: 10.230.6.115
   port: 7092
-# host: 10.219.25.225  
