@@ -87,8 +87,8 @@ public final class Utils {
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode rootNode = mapper.createObjectNode();
 		((ObjectNode) rootNode).put(Const.LOGGED_AT, currentTime);
-		((ObjectNode) rootNode).put(Const.FACILITY, "ccc");
-		((ObjectNode) rootNode).put(Const.ORG, "ctssolar");
+		((ObjectNode) rootNode).put(Const.FACILITY, "cbe");
+		((ObjectNode) rootNode).put(Const.ORG, "sakthiinfotec");
 		((ObjectNode) rootNode).put(Const.SOURCE, Const.NOTIFICATION);
 		((ObjectNode) rootNode).put(Const.META, Const.SERR);
 		((ObjectNode) rootNode).put(Const.SKEY, Const.INGRESS);
