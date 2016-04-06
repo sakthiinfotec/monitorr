@@ -52,7 +52,7 @@ public class ServerComponentMonitor extends ComponentMonitor {
 			socket = null;
 			try {
 				socket = new Socket();
-				socket.connect(new InetSocketAddress(host, port), Const.MONITOR_MILLISECONDS * 10000);
+				socket.connect(new InetSocketAddress(host, port), getConfig().getMonitorSettings().getComponentConnectionTimeout());
 			} catch (IOException e) {
 				serviceDown = true;
 				cause = e.getMessage();
