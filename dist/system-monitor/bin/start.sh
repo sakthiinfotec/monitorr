@@ -1,4 +1,5 @@
-#/usr/bin/env bash
+#!/usr/bin/sh
+
 APP_HOME=$(cd "`dirname $0`/.." && pwd)
 echo "Starting system monitor application from ${APP_HOME} path"
 
